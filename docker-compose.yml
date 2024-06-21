@@ -1,0 +1,21 @@
+version: "3.8"
+services:
+  postgres:
+    container_name: postgres_demo33
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: Supermarket
+    ports:
+      - "5436:5432"
+  pgadmin:
+    container_name: pgadmin4_demo33
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: shrbo@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: root
+    ports:
+      - "5058:80"
